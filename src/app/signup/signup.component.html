@@ -1,0 +1,45 @@
+<app-navbar></app-navbar>
+<div class="container mb-3" style="width: 50%">
+        <div class="container text-center mt-5 pb-4" style="box-shadow: 2px 2px 8px 10px grey">
+           <div class="container pb-2" style="padding-top:15px; border-bottom: 2px solid grey ">
+            <h3 style=" font-style: italic">Hey, Glad you made your way to this side!</h3>
+            <h4 style="font-style: italic">We welcome you to our family.</h4>
+        </div>
+      
+            <div class="container mt-3" style="text-align: left">
+                <form #userForm="ngForm" class="was-validated">
+                
+                    <div class="form-group">
+                        <label for="name">Full Name:</label>
+                        <input type="text" class="form-control" name="user" id="name"  [(ngModel)]="user.name" placeholder="We'd like to know your full name."required >
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" class="form-control" name="mail"  [(ngModel)]="user.email" placeholder="An email to keep you updated, Always!" required  >
+                    </div>
+                    <div class="form-group">
+                        <label for="pass">Password: </label>
+                        <input type="password" id="pass"class="form-control" name="pass"  [(ngModel)]="user.password" placeholder="Make it as strong as you can :')"  required >
+                    </div>
+                
+                    <div class="form-group">
+                        <label for="phone">Contact: </label>
+                        <input type="text" id="phone" class="form-control" name="cont"  [(ngModel)]="user.mobileNo" placeholder="Just in case our team wish to contact you" required  >
+                    </div>
+                    
+                    <label for="">Gender:</label>
+                    <br>
+                    <div class="form-group">
+                      <select class="custom-select bg-darl"  [(ngModel)]="user.gender"  name="Select" id="" required>
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option >Other</option>
+                      </select>
+                    </div>
+                  
+                    <button type="button" class="btn btn-outline-warning btn-block" (click)="alertUser()">Submit</button>
+                    
+                </form>
+              </div>
+            </div>
+            </div>
